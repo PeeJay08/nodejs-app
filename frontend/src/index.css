@@ -1,0 +1,508 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 100px;
+  cursor: pointer;
+}
+.top {
+  display: flex;
+  background:#071952 ;
+  width: 100%;
+}
+.header {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  width: 90vw;
+}
+.money {
+  display: flex;
+  height: 800px;
+
+  margin-right: auto;
+}
+.text {
+  margin-top: 12%;
+  width: 50%;
+}
+.header h1 {
+  text-align: left;
+  margin-top: -20px;
+}
+.header span {
+  color: #2F88FF;
+}
+.header p {
+  font-style: italic;
+}
+.budget-container {
+ margin-top: -50px;
+  padding: 50px 90px;
+}
+.budget-container h1, .budget-container h2, .budget-container h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+ h1, h2 {
+  color: #071952;
+  text-align: center;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+.head-container {
+  margin-top: 22px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+}
+.form-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.form-container form {
+  margin-top: 20px;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+ul {
+  margin: 20px 0;
+  height: 305px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0;
+  overflow-y: auto;
+}
+label{
+  font-weight: bold;
+  color: #071952;
+  font-size: 1.5rem;
+}
+input, select, option{
+  font-size: 1.3rem;
+  margin-right: 130px;
+}
+.delete {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.remaining, .total-expense {
+  border-radius: 5px;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remaining {
+  background-color: #DDE6ED;
+}
+.total-expense {
+  background-color: #A2DBFA;
+}
+.input-budget-container {
+  border-radius: 5px;
+  background-color: #C5DFF8;
+  height: 60px;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.budget {
+  font-weight: bold;
+}
+button{
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.input-budget {
+  width: 100px;
+  margin-right: 1px;
+  text-align: center;
+}
+.input-budget-button {
+  border-radius: 5px;
+  height: 35px;
+  border: 1px solid #2F88FF;
+  background-color: #2F88FF;
+  color: white;
+  width: 50px;
+  margin-left: 8px;
+}
+.data-container {
+  width: 25%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  margin-right: 10px; 
+}
+.data-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.login-form {
+  border-radius: 5px;
+  border: 2px solid #071952;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+.login-form h3 {
+  color: #071952;
+  padding: 10px;
+  text-align: center;
+}
+.login-form form{
+  flex-direction: column;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  width: 370px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-group label {
+  width: auto; 
+  text-align: left;
+  margin-right: 10px; 
+}
+.form-group input {
+  width: 200px;
+  margin-right: 0;
+}
+.login-form a:-webkit-any-link{
+  text-align: center;
+}
+.login-form input[type="submit"] {
+  margin: auto;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid #2F88FF;
+  background-color: #2F88FF;
+}
+
+.popup-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 999;
+}
+
+.popup-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.popup-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.popup-container input[type="text"],
+.popup-container input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.popup-container input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.popup-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px; 
+}
+
+.add {
+  color: white;
+  border: 1px solid #2F88FF;
+  background-color: #2F88FF;
+  margin-top: 20px;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+}
+.logout {
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  border: 1px solid #2F88FF;
+  background-color: #2F88FF;
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  margin-right: 50px;
+  height: 45px;
+  width: 100px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 40px;
+  width: 100%;
+  background-color: #071952;
+  position: fixed;
+  bottom: 0;
+}
+@media screen and (min-width: 995px) and (max-width:1285px){
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+  }
+  .text {
+    text-align: center;
+    margin-top: 400px;
+  }
+  .text h1 {
+    text-align: center;
+  }
+  .money {
+    margin: auto;
+   height: 700px;
+    width: 600px;
+  }
+  .login-form, .register-form {
+    margin: 20px auto;
+  }
+  .list-item {
+    font-size: 1.2em;
+  }
+  .form-container label, .form-container input {
+    font-size: 1.2em;
+    
+  }
+}
+@media screen and (min-width: 745px) and (max-width:994px){
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+  .text {
+    text-align: center;
+    margin-top: 400px;
+  }
+  .text h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .text p {
+    font-size: 14px;
+  }
+  .money {
+    margin: auto;
+    height: 600px;
+    width: 350px;
+  }
+  .login-form{
+    margin: 20px auto;
+    align-items: center;
+    width: 300px;
+  }
+  .login-form h3{
+    font-size: 1.5em;
+  }
+  .login-form label, .login-form input, .login-here {
+    font-size: 1em;
+  }
+  .login-form input[type="submit"]{
+    width: 100px;
+    height: 30px;
+  }
+  .budget-container h3 {
+    font-size: 1.5em;
+  }
+  .head-container {
+    font-size: 1.1em;
+  }
+  .input-budget-container, .remaining, .total-expense {
+    width: auto;
+  }
+  .list-item {
+    font-size: 1em;
+  }
+  .form-container label, .form-container input, .form-container select {
+    font-size: 1.1em;
+    width: 170px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 744px){
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+  }
+  .text {
+    margin-top: -20px;
+    text-align: center;
+    width: auto;
+  }
+  .text h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .text p {
+    font-size: 12px;
+  }
+  .money {
+    margin: auto;
+    height: 250px;
+    width: 250px;
+  }
+  .form-group {
+    width: 200px;
+  }
+  .login-form{
+    margin: 20px auto;
+    align-items: center;
+    width: 250px;
+  }
+  .login-form form{
+    width: auto;
+  }
+  .login-form h3{
+    font-size: 1em;
+  }
+  .login-form label, .login-form input, .login-here {
+    font-size: 1em;
+  }
+  #username {
+    width: 100px;
+  }
+  .login-form input[type="submit"]{
+    font-size: .8em;
+    height: 30px;
+    width: 70px;
+  }
+ .login-here {
+    font-size: 0.8em;
+  }
+  .budget-container {
+    padding: 20px;
+    margin: auto;
+  }
+  .budget-container h1, .budget-container h2 {
+    font-size: 2em;
+  }
+  .budget-container h3 {
+    font-size: 1.5em;
+  }
+  .head-container {
+    font-size: 1.1em;
+  }
+  .input-budget-container, .remaining, .total-expense {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 10px;
+  }
+  .input-budget-container span, .remaining span, .total-expense span {
+    font-size: 0.8em;
+  }
+  .list-item {
+    flex-direction: column;
+    font-size: 1em;
+  }
+  .data-container {
+    width: auto;
+  }
+  .form-container {
+    margin-top: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+  }
+  .form-container label, .form-container input, .form-container select{
+    font-size: 0.9em;
+    margin-right: 15px;
+    width: 100px;
+  }
+  .add {
+    margin: 2px 0;
+    height: 30px;
+  }
+  .budget {
+    font-size: 0.8em;
+  }
+  .logout {
+    font-size: 1em;
+    margin: auto;
+  }
+}

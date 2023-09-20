@@ -1,0 +1,35 @@
+const express = require("express");
+const router = express.Router();
+const User = require("../objects/user");
+
+
+router.get("/getUserIdByUsername/:username", async (req, res) => {
+  try {
+    const user = new User();
+    const { username } = req.params;
+    const userData = await user.getUserIdByUsername(username);
+    res.status(200).json({ userId: userData._id }); // Return the user's ID
+  } catch (err) {
+    console.error(err);
+    res.status(404).json({ error: "User not found" });
+  }
+});
+router.post("/login", async (req, res) => {
+  try {
+    const user = new User();
+    const body = req.body;
+
+    const token = await user.login(body.username, body.password);
+
+    if (token) {
+      res.status(200).send(token);
+    } else {
+      res.sendStatus(401);
+    }
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(404);
+  }
+});
+
+module.exports = router;
