@@ -3,7 +3,7 @@ class UserModel {
 
 async addUser(user) {
     try {
-      const response = await fetch("http://localhost:3000/user/register", {
+      const response = await fetch("https://service-budget.onrender.com/user/register", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
@@ -31,7 +31,7 @@ async addUser(user) {
         username: username,
         password: password,
       };
-      const response = await fetch("http://localhost:3000/auth/login", {
+      const response = await fetch("https://service-budget.onrender.com/auth/login", {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
@@ -54,7 +54,7 @@ async addUser(user) {
   }
   async getUserIdByUsername(username) {
     try {
-      const response = await fetch(`http://localhost:3000/auth/getUserIdByUsername/${username}`, {
+      const response = await fetch(`https://service-budget.onrender.com/auth/getUserIdByUsername/${username}`, {
         method: "GET",
         mode: "cors",
         cache: "no-cache",

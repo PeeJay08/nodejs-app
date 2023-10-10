@@ -4,7 +4,7 @@ class ExpenseModel {
   async getUserData(userId) {
     let response
     try {
-      response = await fetch(`http://localhost:3000/expense/tracker/${userId}`,{
+      response = await fetch(`https://service-budget.onrender.com/expense/tracker/${userId}`,{
         headers: {
           "Authorization": localStorage.getItem("token"),
         },
@@ -18,7 +18,7 @@ class ExpenseModel {
   async getBudget(userId){
     let response
     try {
-      response = await fetch(`http://localhost:3000/expense/budget/${userId}`,{
+      response = await fetch(`https://service-budget.onrender.com/expense/budget/${userId}`,{
         headers: {
           "Authorization": localStorage.getItem("token"),
         },
@@ -32,7 +32,7 @@ class ExpenseModel {
   async editBudget(userId, budget) {
     let response;
     try {
-      response = await fetch(`http://localhost:3000/expense/budget/${userId}`, {
+      response = await fetch(`https://service-budget.onrender.com/expense/budget/${userId}`, {
         method: "PUT",
         mode: "cors",
         cache: "no-cache",
@@ -54,7 +54,7 @@ class ExpenseModel {
   async addExpense(userId, expense) {
     let response;
     try {
-      response = await fetch(`http://localhost:3000/expense/${userId}`, {
+      response = await fetch(`https://service-budget.onrender.com/expense/${userId}`, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
@@ -76,7 +76,7 @@ class ExpenseModel {
   async deleteExpense(userId, expenseId) {
     let response;
     try {
-      response = await fetch(`http://localhost:3000/expense/${userId}/${expenseId}`, {
+      response = await fetch(`https://service-budget.onrender.com/expense/${userId}/${expenseId}`, {
         method: "DELETE",
         mode: "cors",
         cache: "no-cache",
